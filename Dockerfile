@@ -8,4 +8,7 @@ RUN chmod +x /usr/local/bin/confd
 
 COPY entrypoint.sh /opt/entrypoint.sh
 RUN chmod +x /opt/entrypoint.sh
+
+ENV JAVA_OPTS="-Xms512m -Xmx512m"
+
 ENTRYPOINT ["/opt/entrypoint.sh"]
